@@ -20,6 +20,6 @@ export class ShowCountryComponent implements OnInit {
   }
 
   public getCountry(nameCountry) {
-    this.showCountryService.getDetailCountry(nameCountry).subscribe((data) => (this.countryDetail = [data]));
+    this.showCountryService.getDetailCountry(nameCountry).subscribe(data => this.countryDetail = data);
   }
 }

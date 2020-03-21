@@ -1,3 +1,4 @@
+<!--
 <p-table [value]="countryDetail">
   <ng-template pTemplate="header">
     <tr>
@@ -27,7 +28,37 @@
   </ng-template>
 </p-table>
 
+
 <div class="button-voltar">
   <button pButton type="button" label="Voltar" display="block"
   class="ui-button-raised ui-button-secondary" routerLink="/"></button>
+</div>
+-->
+<div class="ui-g">
+  <div class="ui-md-4">
+    <p-card header="{{ countryDetail.country }}" subheader="Casos Registrados: {{ countryDetail.cases }}" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+      <p-header>
+          <img src="Card" src="assets/showcase/images/usercard.png">
+      </p-header>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
+      <p-footer>
+          <button pButton type="button" label="Voltar" display="block" style="margin-right: 25%;"
+    class="ui-button-raised ui-button-secondary" routerLink="/"></button>
+      </p-footer>
+    </p-card>
+  </div>
+  <div class="ui-md-4">
+    <p-card header="{{ countryDetail.country }}" subheader="Casos Registrados: {{ countryDetail.cases }}" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+      <p-header>
+          <img src="Card" src="assets/showcase/images/usercard.png">
+      </p-header>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</div>
+      <p-footer>
+          <button pButton type="button" label="Voltar" display="block" style="margin-right: 25%;"
+    class="ui-button-raised ui-button-secondary" routerLink="/"></button>
+      </p-footer>
+    </p-card>
+  </div>
 </div>
