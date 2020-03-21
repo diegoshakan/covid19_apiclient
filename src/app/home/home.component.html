@@ -1,15 +1,22 @@
-<table border="1">
-  <tr>
-    <th>cases</th>
-    <th>deaths</th>
-    <th>recovered</th>
-  </tr>
-  <tr align="center">
-    <td>{{ dados.cases }}</td>
-    <td>{{ dados.deaths }}</td>
-    <td>{{ dados.recovered }}</td>
-  </tr>
-</table>
+
+
+<p-table [value]="dados">
+  <ng-template pTemplate="header">
+      <tr>
+        <th>Casos</th>
+        <th>Mortes</th>
+        <th>Curados</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-dado>
+      <tr>
+        <td>{{ dado.cases }}</td>
+        <td>{{ dado.deaths }}</td>
+        <td>{{ dado.recovered }}</td>
+      </tr>
+  </ng-template>
+</p-table>
+
 
 <app-countries></app-countries>
 

@@ -11,6 +11,6 @@ export class HomeComponent implements OnInit {
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
-    this.homeService.getGlobalList().subscribe(data => this.dados = data);
+    this.homeService.getGlobalList().subscribe(data => this.dados = [data]);
   }
 }
