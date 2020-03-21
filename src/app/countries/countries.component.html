@@ -2,23 +2,15 @@
   <tr>
     <th>País</th>
     <th>Casos</th>
-    <th>Casos de Hoje</th>
     <th>Mortes</th>
-    <th>Mortes de Hoje</th>
     <th>Curados</th>
-    <th>Casos Ativos</th>
-    <th>Situações Críticas</th>
-    <th>Contaminados a cada 1 milhão</th>
+    <th>Detalhes</th>
   </tr>
   <tr *ngFor="let c of countries">
     <td>{{ c.country }}</td>
     <td>{{ c.cases }}</td>
-    <td>{{ c.todayCases }}</td>
     <td>{{ c.deaths }}</td>
-    <td>{{ c.todayDeaths }}</td>
     <td>{{ c.recovered }}</td>
-    <td>{{ c.active }}</td>
-    <td>{{ c.critical }}</td>
-    <td>{{ c.casesPerOneMillion }}</td>
+    <td><button routerLink='/countries/{{c.country}}'>Ver</button></td>
   </tr>
 </table>

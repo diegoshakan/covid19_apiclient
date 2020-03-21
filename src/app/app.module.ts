@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CountriesComponent } from './countries/countries.component';
+import { ShowCountryComponent } from './show-country/show-country.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CountriesComponent
+    CountriesComponent,
+    ShowCountryComponent
   ],
   imports: [
     BrowserModule,
