@@ -15,5 +15,4 @@ export class CountriesComponent implements OnInit {
       data => this.countries = data
     );
   }
-
 }
