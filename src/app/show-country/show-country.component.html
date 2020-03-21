@@ -1,4 +1,3 @@
-
 <table border="1">
   <tr>
     <th>País</th>
@@ -24,4 +23,33 @@
   </tr>
 </table>
 
-<button routerLink='/'>Voltar</button>
+<button routerLink="/">Voltar</button>
+
+<p-table [value]="countryDetail">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>País</th>
+      <th>Casos</th>
+      <th>Casos de Hoje</th>
+      <th>Mortes</th>
+      <th>Mortes de Hoje</th>
+      <th>Curados</th>
+      <th>Casos Ativos</th>
+      <th>Situações Críticas</th>
+      <th>Contaminados a cada 1 milhão</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-country>
+    <tr>
+      <td>{{ country.country }}</td>
+      <td>{{ country.cases }}</td>
+      <td>{{ country.todayCases }}</td>
+      <td>{{ country.deaths }}</td>
+      <td>{{ country.todayDeaths }}</td>
+      <td>{{ country.recovered }}</td>
+      <td>{{ country.active }}</td>
+      <td>{{ country.critical }}</td>
+      <td>{{ country.casesPerOneMillion }}</td>
+    </tr>
+  </ng-template>
+</p-table>
