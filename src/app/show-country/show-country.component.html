@@ -25,3 +25,33 @@
 </table>
 
 <button routerLink='/'>Voltar</button>
+
+<p-table>
+  <ng-template pTemplate="header">
+      <tr>
+        <th>País</th>
+        <th>Casos</th>
+        <th>Casos de Hoje</th>
+        <th>Mortes</th>
+        <th>Mortes de Hoje</th>
+        <th>Curados</th>
+        <th>Casos Ativos</th>
+        <th>Situações Críticas</th>
+        <th>Contaminados a cada 1 milhão</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body">
+      <tr>
+        <td>{{ countryDetail.country }}</td>
+        <td>{{ countryDetail.cases }}</td>
+        <td>{{ countryDetail.todayCases }}</td>
+        <td>{{ countryDetail.deaths }}</td>
+        <td>{{ countryDetail.todayDeaths }}</td>
+        <td>{{ countryDetail.recovered }}</td>
+        <td>{{ countryDetail.active }}</td>
+        <td>{{ countryDetail.critical }}</td>
+        <td>{{ countryDetail.casesPerOneMillion }}</td>
+      </tr>
+  </ng-template>
+</p-table>
+

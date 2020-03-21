@@ -12,6 +12,8 @@ import { CountriesComponent } from './countries/countries.component';
 import { ShowCountryComponent } from './show-country/show-country.component';
 
 import {ButtonModule} from 'primeng/button';
+import {TableModule} from 'primeng/table';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {ButtonModule} from 'primeng/button';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
