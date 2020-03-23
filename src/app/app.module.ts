@@ -13,7 +13,9 @@ import { ShowCountryComponent } from './show-country/show-country.component';
 
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
-
+import {CardModule} from 'primeng/card';
+import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import {TableModule} from 'primeng/table';
     AppRoutingModule,
     HttpClientModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    CardModule,
+    DialogModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

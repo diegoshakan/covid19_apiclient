@@ -9,10 +9,11 @@ import { ShowCountryService } from './show-country.service';
 })
 export class ShowCountryComponent implements OnInit {
   public countryDetail: any;
+  public flags: any[] = [];
+
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
-    private showCountryService: ShowCountryService
+    private showCountryService: ShowCountryService,
   ) { }
 
   ngOnInit(): void {
@@ -20,6 +21,6 @@ export class ShowCountryComponent implements OnInit {
   }
 
   public getCountry(nameCountry) {
-    this.showCountryService.getDetailCountry(nameCountry).subscribe((data) => (this.countryDetail = [data]));
+    this.showCountryService.getDetailCountry(nameCountry).subscribe(data => this.countryDetail = data);
   }
 }
