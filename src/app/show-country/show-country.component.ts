@@ -9,9 +9,11 @@ import { ShowCountryService } from './show-country.service';
 })
 export class ShowCountryComponent implements OnInit {
   public countryDetail: any;
+  public flags: any[] = [];
+
   constructor(
     private route: ActivatedRoute,
-    private showCountryService: ShowCountryService
+    private showCountryService: ShowCountryService,
   ) { }
 
   ngOnInit(): void {

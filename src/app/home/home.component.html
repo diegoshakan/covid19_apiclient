@@ -1,4 +1,9 @@
 <p-table [value]="dados">
+  <ng-template pTemplate="caption">
+    <div>
+        <p>Covid-19 no mundo</p>
+    </div>
+  </ng-template>
   <ng-template pTemplate="header">
       <tr>
         <th>Casos</th>
@@ -14,7 +19,7 @@
       </tr>
   </ng-template>
 </p-table>
-
+<br />
 
 <app-countries></app-countries>
 
