@@ -10,7 +10,6 @@ import { ShowCountryService } from './show-country.service';
 export class ShowCountryComponent implements OnInit {
   public countryDetail: any;
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
     private showCountryService: ShowCountryService
   ) { }

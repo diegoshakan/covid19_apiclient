@@ -14,8 +14,7 @@ import { ShowCountryComponent } from './show-country/show-country.component';
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
-
-
+import {DialogModule} from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,8 @@ import {CardModule} from 'primeng/card';
     HttpClientModule,
     ButtonModule,
     TableModule,
-    CardModule
+    CardModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

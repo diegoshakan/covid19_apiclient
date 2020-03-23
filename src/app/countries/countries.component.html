@@ -1,4 +1,10 @@
-<p-table [value]="countries">
+<p-table #dt [value]="countries" [paginator]="true" [rows]="10">
+  <ng-template pTemplate="caption">
+    <div style="text-align: right">
+        <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+        <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+    </div>
+  </ng-template>
     <ng-template pTemplate="header">
         <tr>
           <th>País</th>
@@ -16,8 +22,35 @@
           <td>{{ c.recovered }}</td>
           <td><button pButton type="button" label="Info"
             class="ui-button-rounded ui-button-info"
-            routerLink='/countries/{{c.country}}'></button>
+            (click)="showDialog(c)"></button>
           </td>
         </tr>
     </ng-template>
 </p-table>
+
+
+<p-dialog [(visible)]="display" styleClass="mydialog" *ngFor="let cd of countryDialog">
+  <p-header>
+    COVID 19 na {{ cd.country }}
+  </p-header>
+
+  <p-footer>
+    <p-card header="{{ cd.country }}" subheader="Casos Registrados: {{ cd.cases }}"
+    [style]="{width: '460px'}" styleClass="ui-card-shadow">
+      <p-header>
+          imagem aqui. api?
+      </p-header>
+      <div class="align-card-detail">
+       <h3> <div>Total de Mortes: {{ cd.deaths }}</div>
+        <div> Casos de Hoje: {{ cd.todayCases }} </div>
+        <div>Mortes Hoje: {{ cd.todayDeaths }}</div>
+        <div>Pessoas Curadas: {{ cd.recovered }}</div>
+        <div>Casos Ativos: {{ cd.active }}</div>
+        <div>Casos Críticos: {{ cd.critical }}</div>
+        <div>Casos por Milhão de Pessoas: {{ cd.casesPerOneMillion }}</div></h3>
+      </div>
+      <p-footer>
+          teste
+      </p-footer>
+    </p-card>  </p-footer>
+</p-dialog>
