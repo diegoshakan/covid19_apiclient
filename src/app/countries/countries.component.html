@@ -30,56 +30,98 @@
 </p-table>
 -->
 
+<div class="ui-g">
+  <div class="ui-sm-12 ui-md-12 ui-lg-12">
+    <p-table
+      #dt
+      [columns]="cols"
+      [value]="countries"
+      [paginator]="true"
+      [rows]="8"
+      [globalFilterFields]="['country']"
+    >
+      <ng-template pTemplate="caption">
+        <div style="text-align: right">
+          <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+          <input
+            type="text"
+            pInputText
+            size="30"
+            placeholder="País"
+            (input)="dt.filterGlobal($event.target.value, 'contains')"
+            style="width:auto"
+          />
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th *ngFor="let col of cols">
+            {{ col.header }}
+          </th>
+          <th>Detalhes</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-countryCol>
+        <tr>
+          <td *ngFor="let col of cols">
+            {{ countryCol[col.field] }}
+          </td>
+          <td>
+            <button
+              pButton
+              type="button"
+              label="Info"
+              class="ui-button-rounded ui-button-info"
+              (click)="showDialog(countryCol)"
+            ></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
 
-<p-table #dt [columns]="cols" [value]="countries" [paginator]="true" [rows]="8" [globalFilterFields]="['country']">
-  <ng-template pTemplate="caption">
-    <div style="text-align: right">
-        <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
-        <input type="text" pInputText size="30" placeholder="País" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
-    </div>
-  </ng-template>
-  <ng-template pTemplate="header">
-    <tr>
-        <th *ngFor="let col of cols">
-            {{col.header}}
-        </th>
-        <th>Detalhes</th>
-    </tr>
-</ng-template>
-<ng-template pTemplate="body" let-countryCol>
-    <tr>
-        <td *ngFor="let col of cols">
-                {{countryCol[col.field]}}
-        </td>
-        <td><button pButton type="button" label="Info"
-          class="ui-button-rounded ui-button-info"
-          (click)="showDialog(countryCol)"></button>
-        </td>
-    </tr>
-</ng-template>
-</p-table>
+<div class="ui-g">
+  <div class="ui-g-10">
+    <p-dialog
+      [style]="{ 'max-width': '100%' }"
+      [(visible)]="display"
+      [draggable]="false"
+      [keepInViewport]="true"
+      position="center"
+      styleClass="mydialog"
+      *ngFor="let cd of countryDialog"
+    >
+      <p-header> COVID 19 - {{ cd.country }} </p-header>
 
-
-<p-dialog [(visible)]="display" position="right" styleClass="mydialog"
-*ngFor="let cd of countryDialog">
-  <p-header>
-    COVID 19 - {{ cd.country }}
-  </p-header>
-
-  <p-footer>
-    <p-card header="{{ cd.country }}" subheader="Casos Registrados: {{ cd.cases }}"
-    [style]="{width: '460px'}" styleClass="ui-card-shadow">
-      <div class="align-card-detail">
-       <h2> <div>Total de Mortes: {{ cd.deaths }}</div>
-        <div> Casos de Hoje: {{ cd.todayCases }} </div>
-        <div>Mortes Hoje: {{ cd.todayDeaths }}</div>
-        <div>Pessoas Curadas: {{ cd.recovered }}</div>
-        <div>Casos Ativos: {{ cd.active }}</div>
-        <div>Casos Críticos: {{ cd.critical }}</div>
-        <div>Casos por Milhão de Pessoas: {{ cd.casesPerOneMillion }}</div></h2>
-      </div>
       <p-footer>
-          Fonte: <a href="https://www.who.int/" target="_blank">World Health Organization</a>
+        <p-card
+          header="{{ cd.country }}"
+          subheader="Casos Registrados: {{ cd.cases }}"
+          [style]="{ width: '460px', 'max-width': '100%' }"
+          styleClass="ui-card-shadow"
+        >
+          <div class="align-card-detail">
+            <h2>
+              <div>Total de Mortes: {{ cd.deaths }}</div>
+              <div>Casos de Hoje: {{ cd.todayCases }}</div>
+              <div>Mortes Hoje: {{ cd.todayDeaths }}</div>
+              <div>Pessoas Curadas: {{ cd.recovered }}</div>
+              <div>Casos Ativos: {{ cd.active }}</div>
+              <div>Casos Críticos: {{ cd.critical }}</div>
+              <div>
+                Casos por Milhão de Pessoas: {{ cd.casesPerOneMillion }}
+              </div>
+            </h2>
+          </div>
+          <p-footer>
+            Fonte:
+            <a href="https://www.who.int/" target="_blank"
+              >World Health Organization</a
+            >
+          </p-footer>
+        </p-card>
       </p-footer>
-    </p-card>  </p-footer>
-</p-dialog>
+    </p-dialog>
+  </div>
+</div>
