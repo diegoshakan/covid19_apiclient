@@ -9,7 +9,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CountriesComponent } from './countries/countries.component';
-import { ShowCountryComponent } from './show-country/show-country.component';
 
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
@@ -21,8 +20,7 @@ import {InputTextModule} from 'primeng/inputtext';
   declarations: [
     AppComponent,
     HomeComponent,
-    CountriesComponent,
-    ShowCountryComponent
+    CountriesComponent
   ],
   imports: [
     BrowserModule,
