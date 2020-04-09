@@ -7,7 +7,7 @@ import { CountriesService } from './countries.service';
   styleUrls: ['./countries.component.css']
 })
 export class CountriesComponent implements OnInit {
-  countries: any[] = [];
+  countries;
   cols: any[];
   display = false;
   countryDetail: any;
@@ -20,9 +20,7 @@ export class CountriesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.countriesService.getListCountries().subscribe(
-      data => this.countries = data
-    );
+    this.countries = this.countriesService.getListCountries();
 
     this.cols = [
       { field: 'country', header: 'País' },
