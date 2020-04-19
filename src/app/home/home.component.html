@@ -3,7 +3,10 @@
     <p-table [value]="dados">
       <ng-template pTemplate="caption">
         <div>
-          <p>Covid-19 no mundo</p>
+          <h1>Covid-19 no mundo</h1>
+          <p *ngFor="let dado of dados">Atualizado em:
+            {{ dado.updated | date: 'd/MM/yyyy hh:mm a' }}
+          </p>
         </div>
       </ng-template>
       <ng-template pTemplate="header">
@@ -11,13 +14,15 @@
           <th>Casos</th>
           <th>Mortes</th>
           <th>Curados</th>
+          <th>Países Afetados</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-dado>
-        <tr>
+        <tr style="text-align: center">
           <td>{{ dado.cases }}</td>
           <td>{{ dado.deaths }}</td>
           <td>{{ dado.recovered }}</td>
+          <td>{{ dado.affectedCountries }}</td>
         </tr>
       </ng-template>
     </p-table>

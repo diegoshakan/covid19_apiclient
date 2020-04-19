@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class HomeService {
-  private url = 'https://corona.lmao.ninja/all';
+  private url = 'https://corona.lmao.ninja/v2/all';
   constructor(private http: HttpClient) { }
 
   public getGlobalList(): Observable<any[]> {
