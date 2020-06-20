@@ -28,11 +28,11 @@ Este app foi desenvolvido em Angular, consumindo API do [The Novel COVID API](ht
 * Haverá uma barra de busca, pode inserir o país que deseja as informações;
 * Irá aparecer o país e as informações iniciais;
 * Clique no botão *Info* para informações adicionais.
+
+## Versão
 Angular CLI: 9.0.7
 Node: 12.13.1
 OS: linux x64
-
-## Versão
 Angular: 9.0.7
 ... animations, cli, common, compiler, compiler-cli, core, forms
 ... language-service, platform-browser, platform-browser-dynamic
