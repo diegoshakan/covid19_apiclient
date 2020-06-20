@@ -1,6 +1,13 @@
 # Covid19 - A Project to Inform the People Around the World
 - Hosted in [COVID19PRO](http://convide19pro.ga/);
 
+![Tela Inicial](/src/assets/telainicial.png)
+![Paginação](/src/assets/paginacao.png)
+![Pesquisa](/src/assets/pesquisa.png)
+![Detalhes](/src/assets/detalhes.png)
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
