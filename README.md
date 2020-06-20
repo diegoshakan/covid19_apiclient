@@ -1,25 +1,58 @@
-# Covid19 - A Project to Inform the People Around the World
-- Hosted in [COVID19PRO](http://convide19pro.ga/);
+# Covid19 - Um Projeto Para Informar as Pessoas Como Está a Situação do Vírus ao Redor do Mundo
+- Hospedado em [COVID19PRO](http://convide19pro.ga/);
+Neste projeto visei a usuabilidade, onde o usuário reconhcerá facilmente as funções da aplicação e perceberá o quão rápido
+irá encontrar as informações que deseja.
 
 ![Tela Inicial](/src/assets/telainicial.png)
 ![Paginação](/src/assets/paginacao.png)
 ![Pesquisa](/src/assets/pesquisa.png)
 ![Detalhes](/src/assets/detalhes.png)
 
+## Desenvolvido
+Este app foi desenvolvido em Angular, consumindo API do [The Novel COVID API](https://corona.lmao.ninja/).
+
+## Para Ajudar
+1. Faça o fork deste repositório;
+1. Clone/baixe o repositório *forkado* para sua máquina;
+1. Rode: **$ npm install** Para instalar o pacote;
+1. Edite com seu editor de texto de preferência;
+1. **$ ng serve** ou **$ ng s** para subir o servidor local e ver suas alterações funcionando;
+1. Suba para o seu repositório e solicite-me o PR;
+1. Muito obrigado pela ajuda;
+
+## Para Usar
+1. Clique -> [COVID19PRO](http://convide19pro.ga/)
+
+## No Site
+* Estará organizado em ordem alfabética (em Inglês);
+* Haverá uma barra de busca, pode inserir o país que deseja as informações;
+* Irá aparecer o país e as informações iniciais;
+* Clique no botão *Info* para informações adicionais.
+Angular CLI: 9.0.7
+Node: 12.13.1
+OS: linux x64
+
+## Versão
+Angular: 9.0.7
+... animations, cli, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
+... router
+Ivy Workspace: Yes
+
+Package                           Version
+-----------------------------------------------------------
+@angular-devkit/architect         0.900.7
+@angular-devkit/build-angular     0.900.7
+@angular-devkit/build-optimizer   0.900.7
+@angular-devkit/build-webpack     0.900.7
+@angular-devkit/core              9.0.7
+@angular-devkit/schematics        9.0.7
+@angular/cdk                      9.1.3
+@ngtools/webpack                  9.0.7
+@schematics/angular               9.0.7
+@schematics/update                0.900.7
+rxjs                              6.5.4
+typescript                        3.7.5
+webpack                           4.41.2
 
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
