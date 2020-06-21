@@ -1,5 +1,10 @@
 # Covid19 - Um Projeto Para Informar as Pessoas Como Está a Situação do Vírus ao Redor do Mundo
-- Hospedado em [COVID19PRO](http://convide19pro.ga/);
+![GitHub repo size](https://img.shields.io/github/repo-size/diegoshakan/covid19_apiclient?style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/diegoshakan/covid19_apiclient?style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/diegoshakan/covid19_apiclient)
+
+Hospedado em [COVID19PRO](http://convide19pro.ga/);
+
 Neste projeto visei a usuabilidade, onde o usuário reconhcerá facilmente as funções da aplicação e perceberá o quão rápido
 irá encontrar as informações que deseja.
 
@@ -12,8 +17,10 @@ irá encontrar as informações que deseja.
 Este app foi desenvolvido em Angular, consumindo API do [The Novel COVID API](https://corona.lmao.ninja/).
 
 ## Para Ajudar
+1. Abra uma Issue;
 1. Faça o fork deste repositório;
 1. Clone/baixe o repositório *forkado* para sua máquina;
+1. Nosso modelo de branches é a seguinte feature/seu_nome-sua_feature (ou hotfix, ou outra coisa).
 1. Rode: **$ npm install** Para instalar o pacote;
 1. Edite com seu editor de texto de preferência;
 1. **$ ng serve** ou **$ ng s** para subir o servidor local e ver suas alterações funcionando;
