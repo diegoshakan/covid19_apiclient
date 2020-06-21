@@ -14,7 +14,7 @@ irá encontrar as informações que deseja.
 ![Detalhes](/src/assets/detalhes.png)
 
 ## Desenvolvido
-Este app foi desenvolvido em Angular, consumindo API do [The Novel COVID API](https://corona.lmao.ninja/).
+Este app foi desenvolvido em [Angular 9](https://angular.io/), consumindo API do [The Novel COVID API](https://corona.lmao.ninja/).
 
 ## Para Ajudar
 1. Abra uma Issue;
